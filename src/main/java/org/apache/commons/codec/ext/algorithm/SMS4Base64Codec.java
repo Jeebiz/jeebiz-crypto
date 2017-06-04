@@ -60,7 +60,6 @@ public class SMS4Base64Codec implements StringEncoder,StringDecoder,BinaryEncode
 		//return Base64.encodeBase64(SMS4.getInstance().encrypt(plainBytes, key));
 	}
 	
-	@Override
 	public byte[] encode(byte[] plainBytes, int times) throws EncoderException {
 		/*//第一次加密
 		byte[] binaryData = SMS4.getInstance().encrypt(plainBytes, key);
@@ -85,35 +84,37 @@ public class SMS4Base64Codec implements StringEncoder,StringDecoder,BinaryEncode
 	
 	@Override
 	public String decode(String encryptedText) throws DecoderException {
-		return StringUtils.newStringUtf8(SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedText), key));
+		//return StringUtils.newStringUtf8(SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedText), key));
+		return null;
 	}
 	
-	@Override
 	public String decode(String encryptedText, int times) throws DecoderException {
 		//第一次解密
-		byte[] binaryData = SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedText), key);;
+		//byte[] binaryData = SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedText), key);;
 		//多次解密
-		for (int i = 0; i < times - 1; i++) {
+		/*for (int i = 0; i < times - 1; i++) {
 			binaryData = SMS4.getInstance().decrypt(binaryData, key);
-		}
+		}*/
 		//转换String
-		return StringUtils.newStringUtf8(binaryData);
+		//return StringUtils.newStringUtf8(binaryData);
+		return null;
 	}
 
-	@Override
 	public byte[] decode(byte[] encryptedBytes) throws DecoderException {
-		return SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedBytes), key);
+		//return SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedBytes), key);
+		return null;
 	}
 
 	@Override
 	public byte[] decode(byte[] encryptedBytes, int times) throws DecoderException {
-		//第一次解密
+		/*//第一次解密
 		byte[] binaryData = SMS4.getInstance().decrypt(Base64.decodeBase64(encryptedBytes), key);;
 		//多次解密
 		for (int i = 0; i < times - 1; i++) {
 			binaryData = SMS4.getInstance().decrypt(binaryData, key);
 		}
-		return binaryData;
+		return binaryData;*/
+		return null;
 	}
 	
 	/**
@@ -129,7 +130,8 @@ public class SMS4Base64Codec implements StringEncoder,StringDecoder,BinaryEncode
 	 * @throws EncoderException 
 	 */
 	public boolean verify(String source, String encrypt, int times) throws EncoderException{
-		return encode(source, times).equals(encrypt);
+		//return encode(source, times).equals(encrypt);
+		return false;
 	}
 
 	public boolean verify(byte[] source, byte[] encrypt) throws EncoderException {
