@@ -8,8 +8,6 @@ import java.security.Signature;
 /**
  * 
  * @description:签名工具类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-26
  */
 public class SignatureUtils {
 	

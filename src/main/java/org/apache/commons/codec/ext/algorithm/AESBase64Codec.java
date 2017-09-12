@@ -23,10 +23,12 @@ import org.apache.commons.codec.ext.utils.StringUtils;
 
 /**
  * 
- * @description:AES加密解密工具包 AES对称加密算法
+ * @className	： AESBase64Codec
+ * @description	： AES加密解密工具包 AES对称加密算法
  * 				java6实现，bouncycastle也支持AES对称加密算法我们可以以AES算法实现为参考，完成RC2，RC4和Blowfish算法的实现
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
+ * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @date		： 2017年9月12日 下午10:45:44
+ * @version 	V1.0
  */
 public class AESBase64Codec implements Codec, SecretKeyEncoder,SecretKeyDecoder,FileEncoder,FileDecoder {
 
@@ -59,10 +61,9 @@ public class AESBase64Codec implements Codec, SecretKeyEncoder,SecretKeyDecoder,
 	
 	/**
 	 * 
-	 * @description: 加密数据
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午6:50:03 
+	 * @description	： 加密数据
+	 * @author 		：<a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:46:00
 	 * @param plainBytes 待加密数据
 	 * @param base64Key  密钥
 	 * @return byte[] 加密后的数据
@@ -115,9 +116,6 @@ public class AESBase64Codec implements Codec, SecretKeyEncoder,SecretKeyDecoder,
 	/**
 	 * 
 	 * @description: 解密数据
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午6:43:10 
 	 * @param data 待解密数据
 	 * @param base64Key  密钥
 	 * @return byte[] 解密后的数据

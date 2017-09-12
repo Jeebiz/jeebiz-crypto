@@ -24,9 +24,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  * @package org.apache.commons.codec.ext.algorithm
  * @className: DESCodec
  * @description: DES对称加密算法
- * @author : wandalong
- * @date : 2014-9-28
- * @time : 下午7:37:29
  */
 public class DESBase64Codec implements Codec,SecretKeyEncoder,SecretKeyDecoder,FileEncoder,FileDecoder {
 	

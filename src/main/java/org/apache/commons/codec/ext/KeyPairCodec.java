@@ -22,8 +22,6 @@ public interface KeyPairCodec {
 	/**
 	 * 
 	 * @description: 初始化 钥匙对
-	 * @author : wandalong
-	 * @date 下午1:57:18 2014-10-9 
 	 * @return
 	 * @throws GeneralSecurityException
 	 * @return  Map<String,Object> 返回类型
@@ -41,16 +39,11 @@ public interface KeyPairCodec {
 	 /**
 	  * 
 	  * @description: 还原公钥
-	  * @author : wandalong
-	  * @date 下午1:57:08 2014-10-9 
 	  * @param key
 	  * @return
 	  * @throws GeneralSecurityException
 	  * @return  PublicKey 返回类型
 	  * @throws  
-	  * @modify by:
-	  * @modify date :
-	  * @modify description : TODO(描述修改内容)
 	  */
 	 public PublicKey toPublicKey(byte[] base64PublicKeyBytes) throws GeneralSecurityException;
 	 
@@ -59,8 +52,6 @@ public interface KeyPairCodec {
 	 /**
 	  * 
 	  * @description: 还原私钥
-	  * @author : wandalong
-	  * @date 下午1:56:39 2014-10-9 
 	  * @param key
 	  * @return
 	  * @throws GeneralSecurityException

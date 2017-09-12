@@ -14,8 +14,6 @@ import org.apache.commons.codec.ext.StringVerifier;
 /**
  * 
  * @description:标准MD5+Base64加密方法，使用java类库的security包的MessageDigest类处理
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-26
  */
 public class MD5Base64Codec implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier {
 	

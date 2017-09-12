@@ -6,9 +6,6 @@ import java.util.Random;
  * @package com.jeekit.encrypt.utils
  * @className: StringUtils
  * @description: TODO
- * @author : <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date : 2014-1-6
- * @time : 上午9:19:07 
  */
 
 public class StringUtils extends org.apache.commons.codec.binary.StringUtils{

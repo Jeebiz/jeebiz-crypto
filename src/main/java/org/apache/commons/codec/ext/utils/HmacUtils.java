@@ -24,9 +24,6 @@ public class HmacUtils {
 	/**
 	 * 
 	 * @description: Hmac消息摘要
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午6:57:05 
 	 * @param plainBytes 待做摘要处理的数据
 	 * @param key   密钥
 	 * @return byte[] 消息摘要

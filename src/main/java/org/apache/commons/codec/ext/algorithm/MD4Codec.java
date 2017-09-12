@@ -15,8 +15,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
 /**
  * 
  * @description:bouncy castle扩展支持的MD4的算法实现
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-26
  */
 public class MD4Codec implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier  {
 

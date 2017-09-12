@@ -8,17 +8,12 @@ import java.security.cert.CertificateFactory;
 /**
  * 
  * @description:
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public final class KeyStoreUtils {
 
 	/**
 	 * 
 	 * @description: 获得证书对象
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午1:45:45 
 	 * @param certificatePath 证书路径
 	 * @return 
 	 * @throws Exception
@@ -30,9 +25,6 @@ public final class KeyStoreUtils {
 	/**
 	 * 
 	 * @description: 获得证书对象
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午1:45:45 
 	 * @param certificatePath 证书路径
 	 * @return 
 	 * @throws Exception

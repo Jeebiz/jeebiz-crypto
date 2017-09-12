@@ -25,9 +25,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  * @package org.apache.commons.codec.ext.algorithm
  * @className: DESedeCodec
  * @description: DESede+ Base64 加密算法
- * @author : wandalong
- * @date : 2014-9-28
- * @time : 下午7:38:13
  */
 public class DESedeBase64Codec implements Codec,SecretKeyEncoder,SecretKeyDecoder,FileEncoder,FileDecoder{
 	

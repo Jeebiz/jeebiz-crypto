@@ -17,8 +17,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 /**
  * 
  * @description:加密工具
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-28
  */
 public final class CipherUtils {
 	
@@ -32,9 +30,6 @@ public final class CipherUtils {
 	/**
 	 * 
 	 * @description: 生成一个实现RSA转换的 Cipher 对象。Cipher对象实际完成加解密操作
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 上午9:08:24 
 	 * @return
 	 * @throws GeneralSecurityException
 	 */
@@ -45,9 +40,6 @@ public final class CipherUtils {
 	/**
 	 * 
 	 * @description: 生成一个实现AES转换的 Cipher 对象。Cipher对象实际完成加解密操作
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 上午9:08:24 
 	 * @return
 	 * @throws GeneralSecurityException
 	 */
@@ -59,9 +51,6 @@ public final class CipherUtils {
 	/**
 	 * 
 	 * @description: 生成一个实现DES转换的 Cipher 对象。Cipher对象实际完成加解密操作
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 上午9:08:24 
 	 * @return
 	 * @throws GeneralSecurityException
 	 */
@@ -73,9 +62,6 @@ public final class CipherUtils {
 	/**
 	 * 
 	 * @description:  加密解密第2步：生成一个实现指定转换的 Cipher 对象。Cipher对象实际完成加解密操作
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 上午9:08:14 
 	 * @param algorithm
 	 * @return
 	 * @throws GeneralSecurityException
@@ -153,8 +139,6 @@ public final class CipherUtils {
 	/**
 	 * 
 	 * @description: 数据分段加密/解密
-	 * @author : wandalong
-	 * @date 下午5:07:53 2014-10-9 
 	 * @param cipher
 	 * @param bytes
 	 * @param block

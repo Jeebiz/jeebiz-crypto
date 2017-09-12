@@ -64,9 +64,6 @@ public class SHAHexCodec  implements StringEncoder,BinaryEncoder,StringVerifier 
 	/**
 	 * 
 	 * @description: SHA-256消息摘要
-	 * @author : wandalong
-	 * @date : 2014-9-26
-	 * @time : 下午5:46:07 
 	 * @param source
 	 * @return
 	 * @throws EncoderException

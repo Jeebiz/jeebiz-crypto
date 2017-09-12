@@ -13,8 +13,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
 /**
  * 
  * @description:基于apache codec 的base64加密解密实现的扩展
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-26
  */
 public class Base64Codec implements StringEncoder,StringDecoder,BinaryEncoder,BinaryDecoder,StringVerifier,BinaryVerifier {
 	

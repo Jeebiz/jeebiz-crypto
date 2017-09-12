@@ -17,8 +17,6 @@ import org.apache.commons.codec.binary.Base64;
 /**
  * 
  * @description:证书组件
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public abstract class CertificateCodec  {
 

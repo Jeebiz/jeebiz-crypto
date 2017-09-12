@@ -8,9 +8,6 @@ public interface Codec {
 	/**
 	 * 
 	 * @description: 初始化key
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午6:21:49 
 	 * @return
 	 * @throws Exception
 	 */
@@ -19,9 +16,6 @@ public interface Codec {
 	 /**
 	  * 
 	  * @description: 还原key
-	  * @author : wandalong
-	  * @date : 2014-9-29
-	  * @time : 下午6:22:02 
 	  * @param key
 	  * @return
 	  * @throws Exception

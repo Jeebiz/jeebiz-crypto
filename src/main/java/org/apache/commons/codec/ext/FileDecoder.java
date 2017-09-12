@@ -5,8 +5,6 @@ import java.security.GeneralSecurityException;
 /**
  * 
  * @description:
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public interface FileDecoder {
 

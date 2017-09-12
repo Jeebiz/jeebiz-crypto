@@ -21,8 +21,6 @@ import org.apache.commons.codec.ext.enums.Algorithm;
 /**
  * 
  * @description:加密工具类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public class EncryptUtils {
 	
@@ -92,9 +90,6 @@ public class EncryptUtils {
 	/**
 	 * 
 	 * @description: 加密文件
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:08:03 
 	 * @param algorithm		 算法名称
 	 * @param plaintextFile	 未加密过的文件
 	 * @param encryptedFile  加密过的文件

@@ -23,11 +23,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
   * 
   * @className: RSACodec
   * @description: RSA安全编码组件
-  * @author : wandalong
-  * @date : 下午2:35:41 2014-10-9
-  * @modify by:
-  * @modify date :
-  * @modify description :
   */
  public class RSABase64Codec implements KeyPairCodec,KeyPairEncoder,KeyPairDecoder,KeyPairVerifier {
 
@@ -162,8 +157,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  	/**
  	 * 
  	 * @description:  校验数字签名
- 	 * @author : wandalong
- 	 * @date 下午1:42:32 2014-10-9 
  	 * @param encryptedBytes 加密数据
  	 * @param base64PublicKeyText 公钥
  	 * @param sign 数字签名

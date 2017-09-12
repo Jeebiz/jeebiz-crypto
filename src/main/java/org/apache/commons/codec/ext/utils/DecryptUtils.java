@@ -23,8 +23,6 @@ import org.apache.commons.codec.ext.enums.Algorithm;
 /**
  * 
  * @description:解密工具类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public class DecryptUtils {
 	
@@ -64,9 +62,6 @@ public class DecryptUtils {
 	/**
 	 * 
 	 * @description: 解密数据
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:10:36 
 	 * @param cipher			加密组件
 	 * @param secretKey  		密钥
 	 * @param encryptedBytes		待解密数据
@@ -83,9 +78,6 @@ public class DecryptUtils {
 	/**
 	 * 
 	 * @description: 解密数据
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:10:26 
 	 * @param cipher			加密组件
 	 * @param secretKey  		密钥
 	 * @param encryptedText		待解密数据
@@ -99,9 +91,6 @@ public class DecryptUtils {
 	/**
 	 * 
 	 * @description: 解密数据
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:10:14 
 	 * @param cipher	加密组件
 	 * @param secretKey  		密钥
 	 * @param encryptedBytes		待解密数据
@@ -115,9 +104,6 @@ public class DecryptUtils {
 	/**
 	 * 
 	 * @description: 解密数据
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:10:14 
 	 * @param cipher			加密组件
 	 * @param secretKey  		密钥
 	 * @param encryptedText		待解密数据
@@ -131,9 +117,6 @@ public class DecryptUtils {
 	/**
 	 * 
 	 * @description: 解密文件
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午8:08:25 
 	 * @param algorithm  	算法名称
 	 * @param encryptedFile 加密过的文件
 	 * @param decryptedFile 解密后的文件

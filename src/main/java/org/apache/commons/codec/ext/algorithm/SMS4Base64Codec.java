@@ -14,8 +14,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
 /**
  * 
  * @description:基于国密SMS4算法的加密解密类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-30
  */
 public class SMS4Base64Codec implements StringEncoder,StringDecoder,BinaryEncoder,BinaryDecoder,StringVerifier,BinaryVerifier {
 	

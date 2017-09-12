@@ -7,8 +7,6 @@ import java.security.PublicKey;
   * @title: KeyPairEncoder.java
   * @package org.apache.commons.codec.ext
   * @fescription: TODO(添加描述)
-  * @author: wandalong
-  * @date : 下午1:45:57 2014-10-9 
   */
  public interface KeyPairEncoder {
 	 

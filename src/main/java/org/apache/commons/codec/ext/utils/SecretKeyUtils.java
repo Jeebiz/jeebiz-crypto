@@ -33,8 +33,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 /**
  * 
  * @description:秘钥工具类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public class SecretKeyUtils {
 
@@ -74,9 +72,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 生成公有key
-	 * @author : wandalong
-	 * @date : 2014-9-26
-	 * @time : 下午6:21:13
 	 * @param pubkey_bytes
 	 * @param algorithm
 	 * @return
@@ -94,9 +89,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 生成私有key
-	 * @author : wandalong
-	 * @date : 2014-9-26
-	 * @time : 下午6:21:57
 	 * @param prikey_bytes
 	 * @param algorithm
 	 * @return
@@ -118,9 +110,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 秘密（对称）密钥(SecretKey继承(key))
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 上午10:01:42 
 	 * @param key
 	 * @param algorithm
 	 * @return
@@ -133,9 +122,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: <p> 根据秘钥种子生成随机密钥</p>
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 上午10:16:29
 	 * @param seed 密钥种子
 	 * @param algorithm 生成密匙的算法
 	 * @param keySize 密匙长度
@@ -169,9 +155,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 生成相应算法密钥
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 下午6:54:55 
 	 * @param algorithm
 	 * @return SecretKey 密钥
 	 * @throws GeneralSecurityException
@@ -233,9 +216,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 加密解密第一步：从一组固定的原始数据（也许是由口令或者随机击键产生的）来生成一个密钥
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 上午10:44:05 
 	 * @param keySpec
 	 * @param algorithm
 	 * @return
@@ -315,9 +295,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 从 *.key 文件中读取 SecretKey 对象
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 上午11:25:08 
 	 * @param inStream
 	 * @return
 	 */
@@ -338,9 +315,6 @@ public class SecretKeyUtils {
 	/**
 	 * 
 	 * @description: 将SecretKey 对象 写到 *.key 文件中 
-	 * @author : wandalong
-	 * @date : 2014-9-28
-	 * @time : 上午11:25:43 
 	 * @param key
 	 * @param outStream
 	 */

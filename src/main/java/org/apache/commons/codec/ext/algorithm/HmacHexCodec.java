@@ -17,9 +17,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  * @package org.apache.commons.codec.ext.algorithm
  * @className: HmacHexCodec
  * @description: MAC消息摘要组件
- * @author : wandalong
- * @date : 2014-9-28
- * @time : 下午7:37:41
  */
 public class HmacHexCodec implements StringEncoder,BinaryEncoder,StringVerifier {
 	

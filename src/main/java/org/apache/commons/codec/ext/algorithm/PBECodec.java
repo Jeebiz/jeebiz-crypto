@@ -23,8 +23,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  * PBEWITHSHAANDDESEDE
  * PBEWITHSHA1ANDRC2_40
  * PBKDF2WITHHMACSHA1
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public class PBECodec implements Codec {
 	
@@ -43,9 +41,6 @@ public class PBECodec implements Codec {
 	/**
 	 * 
 	 * @description: 盐初始化:盐长度必须为8字节
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午7:46:00 
 	 * @return byte[] 盐
 	 * @throws GeneralSecurityException
 	 */
@@ -63,9 +58,6 @@ public class PBECodec implements Codec {
 	/**
 	 * 
 	 * @description: 转换密钥
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午7:51:19 
 	 * @param password 密码
 	 * @return Key 密钥
 	 * @throws GeneralSecurityException

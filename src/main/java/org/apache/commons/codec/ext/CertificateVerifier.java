@@ -6,17 +6,12 @@ import java.util.Date;
 /**
  * 
  * @description:证书验证接口
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-29
  */
 public interface CertificateVerifier {
 
 	/**
 	 * 
 	 * @description: 判断证书是否过期
-	 * @author : wandalong
-	 * @date : 2014-9-29
-	 * @time : 下午1:43:11 
 	 * @param date
 	 * @param certificate
 	 * @return

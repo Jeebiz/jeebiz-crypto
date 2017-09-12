@@ -24,11 +24,6 @@ import org.apache.commons.codec.ext.utils.StringUtils;
  * 
  * @className: RSAHelper
  * @description: 加解密工具类
- * @author : wandalong
- * @date : 下午02:25:13 2015-3-7
- * @modify by:
- * @modify date :
- * @modify description :
  */
 public final class RSACodec {
 	

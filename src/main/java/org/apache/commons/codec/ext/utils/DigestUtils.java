@@ -14,9 +14,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
  * @package org.apache.commons.codec.ext.digest
  * @className: DigestUtils
  * @description: TODO
- * @author : wandalong
- * @date : 2014-9-28
- * @time : 下午1:49:35
  */
 public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils{
 	

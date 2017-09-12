@@ -7,8 +7,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 /**
  * 
  * @description:数组工具类
- * @author <a href="mailto:hnxyhcwdl1003@163.com">wandalong</a>
- * @date 2014-9-26
  */
 public class BinaryUtils {
 
@@ -21,9 +19,6 @@ public class BinaryUtils {
 	/**
 	 * 
 	 * @description: 获取16进制字节数组的二级制数组
-	 * @author : wandalong
-	 * @date : 2014-9-26
-	 * @time : 下午1:45:30 
 	 * @param bytes
 	 * @return
 	 */
@@ -42,9 +37,6 @@ public class BinaryUtils {
 	/**
 	 * 
 	 * @description: 获取字符串的ASCII数组
-	 * @author : wandalong
-	 * @date : 2014-9-26
-	 * @time : 下午1:46:55 
 	 * @param data
 	 * @return
 	 */

@@ -10,9 +10,6 @@ package org.apache.commons.codec.ext.algorithm;
 				 就没有真正设计256和320位这2种标准，他们只是在128位和160位的基础上，修改了初始参数和s-box来达到
 				 输出为256和320位的目的。所以，256位的强度和128相当，而320位的强度和160位相当。RIPEMD建立在md的
 				 基础之上，所以，其添加数据的方式和md5完全一样。
- * @author : wandalong
- * @date : 2014-9-28
- * @time : 下午1:55:11
  */
 public class RIPEMDCodec {
 	
