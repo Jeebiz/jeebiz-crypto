@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.Provider;
-import java.security.Security;
-
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import net.jeebiz.crypto.enums.Algorithm;
 
@@ -20,14 +16,6 @@ public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils {
 
 	private static final char[] HEX_CHARS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e',
 			'f' };
-
-	static {
-		if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
-			// 加入bouncyCastle支持
-			//Security.addProvider(new BouncyCastleProvider());
-			Security.insertProviderAt(new BouncyCastleProvider(), 1);
-		}
-	}
 
 	private static final int STREAM_BUFFER_LENGTH = 1024;
 
@@ -108,23 +96,4 @@ public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils {
 		return chars;
 	}
 
-	public static void main(String[] args) {
-
-		for (Provider p : Security.getProviders()) {
-			System.out.println(p);
-			/*
-			 * for (Map.Entry<Object, Object> entry : p.entrySet()) {
-			 * System.out.println("\t"+entry.getKey()); }
-			 */
-		}
-		
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_SM3));
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD128));
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD160));
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD256));
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD320));
-		//System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).getProvider());
-		//System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).digest().length);
-
-	}
 }

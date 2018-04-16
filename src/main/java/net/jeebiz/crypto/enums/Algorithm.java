@@ -19,20 +19,25 @@ public final class Algorithm {
 	
 	public final static String KEY_DES  = "DES";
 	
-	public final static String KEY_CIPHER_DES  = "DES/ECB/PKCS5Padding";
+	public final static String KEY_CIPHER_DES  = "DES/ECB/PKCS7Padding";
 	
 	public final static String KEY_DESEDE  = "DESede";
+	
+	public final static String KEY_CIPHER_DESEDE  = "DESede/ECB/PKCS7Padding";
+	
+	/**
+	 * RSA对称加密算法
+	 */
+	
+	public final static String KEY_RSA  = "RSA";
+ 	public final static String KEY_SIGNATURE_MD5_RSA = "MD5withRSA";
+ 	public final static String KEY_SIGNATURE_SHA1_RSA = "SHA1withRSA";
 	/**
 	 * 加密/解密算法/工作模式/填充方式
 	 * */
-	public final static String KEY_CIPHER_DESEDE  = "DESede/ECB/PKCS5Padding";
+	public final static String KEY_CIPHER_RSA_ECB_NOPADDING  = "RSA/ECB/NoPadding";
+	public final static String KEY_CIPHER_RSA_ECB_PKCS1PADDING  = "RSA/ECB/PKCS1Padding";
 	
-	public final static String KEY_RSA  = "RSA";
-	
-	public final static String KEY_CIPHER_RSA  = "RSA/ECB/NoPadding";
-	
- 	public final static String KEY_SIGNATURE_RSA = "MD5withRSA";
- 	
 	/**
 	 * IDEA对称加密算法，java6不支持这个算法的实现，bouncycastle支持IDEA对称加密算法
 	 */
@@ -49,6 +54,10 @@ public final class Algorithm {
 	public final static String KEY_SHA384  = "sha384";
 	
 	public final static String KEY_SHA512  = "sha512";
+	
+	public final static String KEY_SIGNATURE_SHA512_RSA = "SHA512withRSA";
+	
+	
 	
 	public final static String KEY_SM3  = "SM3";
 	/**
@@ -126,5 +135,6 @@ public final class Algorithm {
 	
 	public final static String KEY_PBE_HMACSHA1  = "PBKDF2WITHHMACSHA1";
 	
+
 	
 }

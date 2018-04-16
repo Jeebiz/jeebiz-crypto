@@ -66,7 +66,7 @@ public class DESBase64Crypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder
 		// 根据秘钥和算法获取加密执行对象；用密钥初始化此 cipher ，设置为加密模式  ;
 		Cipher enCipher = CipherUtils.getEncryptCipher(Algorithm.KEY_CIPHER_DES, secretKey);
 		//执行加密操作
-		plainBytes = EncryptUtils.encrypt(enCipher, secretKey, plainBytes);
+		plainBytes = EncryptUtils.encrypt(enCipher, plainBytes, secretKey);
 		/*使用base64加密算法对DES摘要算法结果进行加密
 		   1、为了防止解密时报javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher异常，  
            2、不能把加密后的字节数组直接转换成字符串  
@@ -110,7 +110,7 @@ public class DESBase64Crypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder
 		//使用base64加密算法对base64Bytes数组解密；
 		encryptedBytes = Base64.decodeBase64(encryptedBytes);
 		//DES摘要算法对base64解密后的结果进行解密
-		return DecryptUtils.decrypt(deCipher, secretKey , encryptedBytes);
+		return DecryptUtils.decrypt(deCipher , encryptedBytes, secretKey);
 	}
 	
 	public void decode(String key, String encryptedFilePath, String destFilePath) throws GeneralSecurityException, IOException {
@@ -146,14 +146,13 @@ public class DESBase64Crypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder
 		/*<property name="jdbcUrl" value=></property> 
         <property name="user" value=></property>
         <property name="password" value=></property>
-        	服务器：10.71.32.37  SID:test    用户名：zftal_jwcj   密码：zftal_jwcj
         */
 		String encryptKeyText = "7EV/Zzutjzg=";
 		
 		//"jdbc:oracle:thin:@10.71.32.37:1521:DevDB";  / szzyjwa
-		String jdbcUrlText = "jdbc:oracle:thin:@10.71.32.37:1521:test";
-		String userText = "zftal_jwcj";
-		String passwordText = "zftal_jwcj";
+		String jdbcUrlText = "jdbc:oracle:thin:@10.71.32.37:1521:DevDB";
+		String userText = "admin";
+		String passwordText = "admin";
 		
 		String jdbcUrl = DESBase64Crypto.getInstance().encode(jdbcUrlText,encryptKeyText);
 		String user = DESBase64Crypto.getInstance().encode(userText,encryptKeyText);

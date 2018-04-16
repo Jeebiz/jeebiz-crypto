@@ -62,7 +62,7 @@ public class DESedeCrypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder,Fi
 	public byte[] encode(byte[] plainBytes, byte[] base64Key) throws GeneralSecurityException {
 		//还原密钥
 		Key k = toKey(base64Key);
-		return EncryptUtils.encrypt(CipherUtils.getCipher(Algorithm.KEY_CIPHER_DESEDE), k, plainBytes);
+		return EncryptUtils.encrypt(CipherUtils.getCipher(Algorithm.KEY_CIPHER_DESEDE), plainBytes, k);
 	}
 	
 	public void encode(String base64Key, String sourceFilePath, String destFilePath) throws GeneralSecurityException, IOException {
@@ -96,7 +96,7 @@ public class DESedeCrypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder,Fi
 	public byte[] decode(byte[] encryptedBytes, byte[] base64Key) throws GeneralSecurityException {
 		//还原密钥
 		Key k = toKey(base64Key);
-		return DecryptUtils.decrypt(CipherUtils.getCipher(Algorithm.KEY_CIPHER_DESEDE), k, encryptedBytes);
+		return DecryptUtils.decrypt(CipherUtils.getCipher(Algorithm.KEY_CIPHER_DESEDE), encryptedBytes, k);
 	}
 	
 	public void decode(String base64Key, String encryptedFilePath, String destFilePath) throws GeneralSecurityException, IOException {

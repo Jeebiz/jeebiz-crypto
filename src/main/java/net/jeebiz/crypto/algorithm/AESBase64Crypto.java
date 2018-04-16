@@ -79,7 +79,7 @@ public class AESBase64Crypto implements Crypto, SecretKeyEncoder,SecretKeyDecode
 		 */
 		Cipher enCipher = CipherUtils.getEncryptCipher(Algorithm.KEY_CIPHER_AES, secretKey);
 		//执行加密操作
-		plainBytes = EncryptUtils.encrypt(enCipher, secretKey, plainBytes);
+		plainBytes = EncryptUtils.encrypt(enCipher, plainBytes, secretKey);
 		//使用base64加密算法对DES摘要算法结果进行加密
 		return Base64.encodeBase64(plainBytes);
 	}
@@ -133,7 +133,7 @@ public class AESBase64Crypto implements Crypto, SecretKeyEncoder,SecretKeyDecode
 		//使用base64加密算法对base64Bytes数组解密；
 		encryptedBytes = Base64.decodeBase64(encryptedBytes);
 		//DES摘要算法对base64解密后的结果进行解密
-		return DecryptUtils.decrypt(deCipher, secretKey , encryptedBytes);
+		return DecryptUtils.decrypt(deCipher , encryptedBytes, secretKey);
 	}
 
 	public void decode(String key, String encryptedFilePath, String destFilePath) throws GeneralSecurityException, IOException {

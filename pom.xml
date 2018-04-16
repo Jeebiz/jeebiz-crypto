@@ -431,46 +431,6 @@
 			<artifactId>bcprov-ext-jdk15on</artifactId>
 			<version>${bcprov.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on -->
-		<!-- The Bouncy Castle Java APIs for CMS, PKCS, EAC, TSP, CMP, CRMF, OCSP, 
-			and certificate generation. This jar contains APIs for JDK 1.5 to JDK 1.8. 
-			The APIs can be used in conjunction with a JCE/JCA provider such as the one 
-			provided with the Bouncy Castle Cryptography APIs. -->
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcpkix-jdk15on</artifactId>
-			<version>${bcpkix.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcmail-jdk15on -->
-		<!-- The Bouncy Castle Java S/MIME APIs for handling S/MIME protocols. 
-			This jar contains S/MIME APIs for JDK 1.5 to JDK 1.8. The APIs can be used 
-			in conjunction with a JCE/JCA provider such as the one provided with the 
-			Bouncy Castle Cryptography APIs. The JavaMail API and the Java activation 
-			framework will also be needed. -->
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcmail-jdk15on</artifactId>
-			<version>${bcmail.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on -->
-		<!-- The Bouncy Castle Java API for handling the OpenPGP protocol. This 
-			jar contains the OpenPGP API for JDK 1.5 to JDK 1.8. The APIs can be used 
-			in conjunction with a JCE/JCA provider such as the one provided with the 
-			Bouncy Castle Cryptography APIs. -->
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcpg-jdk15on</artifactId>
-			<version>${bcpg.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bctls-jdk15on -->
-		<!-- The Bouncy Castle Java APIs for TLS and DTLS, including a provider 
-			for the JSSE. -->
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bctls-jdk15on</artifactId>
-			<version>${bctls.version}</version>
-		</dependency>
-
 
 	</dependencies>
 
