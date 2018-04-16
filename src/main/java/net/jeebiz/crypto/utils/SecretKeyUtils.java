@@ -40,9 +40,9 @@ public class SecretKeyUtils {
 	public static final int CACHE_SIZE = 1024;
 
 	static {
-		if(Security.getProvider("BC") == null){
+		if(Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null){
 			// 加入bouncyCastle支持
-			Security.addProvider(new BouncyCastleProvider());
+			Security.insertProviderAt(new BouncyCastleProvider(), 1);
 		}
 	}
 
@@ -370,7 +370,7 @@ public class SecretKeyUtils {
       String pri_key = Base64.encodeBase64String(priKey.getEncoded());
       System.out.println("私钥: " + pri_key);
 	
-      System.out.println(Hex.encodeHexString(SecretKeyUtils.genRandomKey(32)));
+      //System.out.println(Hex.encodeHexString(SecretKeyUtils.genRandomKey(32)));
 	}
 
 }

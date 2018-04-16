@@ -7,76 +7,77 @@ import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
 import java.security.Security;
 
-import net.jeebiz.crypto.enums.Algorithm;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
+import net.jeebiz.crypto.enums.Algorithm;
+
 /**
  * 
  * @package net.jeebiz.crypto.digest
- * @className: DigestUtils
- *  TODO
+ * @className: DigestUtils TODO
  */
-public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils{
-	
-	private static final char[] HEX_CHARS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-	
+public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils {
+
+	private static final char[] HEX_CHARS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e',
+			'f' };
+
 	static {
-		if(Security.getProvider("BC") == null){
+		if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
 			// 加入bouncyCastle支持
-			Security.addProvider(new BouncyCastleProvider());
+			//Security.addProvider(new BouncyCastleProvider());
+			Security.insertProviderAt(new BouncyCastleProvider(), 1);
 		}
 	}
-	
+
 	private static final int STREAM_BUFFER_LENGTH = 1024;
-	
-	public static byte[] md4(String source){
+
+	public static byte[] md4(String source) {
 		return md4(source.getBytes());
 	}
-	
-	public static byte[] md4(byte[] source){
+
+	public static byte[] md4(byte[] source) {
 		return DigestUtils.getDigest(Algorithm.KEY_MD4).digest(source);
 	}
-	
-	public static byte[] md4(InputStream source) throws IOException{
-		return digest(DigestUtils.getDigest(Algorithm.KEY_MD4),source);
+
+	public static byte[] md4(InputStream source) throws IOException {
+		return digest(DigestUtils.getDigest(Algorithm.KEY_MD4), source);
 	}
-	
+
 	public static byte[] digest(MessageDigest digest, InputStream data) throws IOException {
-        byte[] buffer = new byte[STREAM_BUFFER_LENGTH];
-        int read = data.read(buffer, 0, STREAM_BUFFER_LENGTH);
+		byte[] buffer = new byte[STREAM_BUFFER_LENGTH];
+		int read = data.read(buffer, 0, STREAM_BUFFER_LENGTH);
 
-        while (read > -1) {
-            digest.update(buffer, 0, read);
-            read = data.read(buffer, 0, STREAM_BUFFER_LENGTH);
-        }
+		while (read > -1) {
+			digest.update(buffer, 0, read);
+			read = data.read(buffer, 0, STREAM_BUFFER_LENGTH);
+		}
 
-        return digest.digest();
-    }
-	
+		return digest.digest();
+	}
+
 	public static MessageDigest getDigest(Algorithm algorithm) {
-        return DigestUtils.getDigest(algorithm.toString());
-    }
-	
-	public static MessageDigest getDigest(Algorithm algorithm,String provider) {
-        return DigestUtils.getDigest(algorithm.toString(),provider);
-    }
-	
+		return DigestUtils.getDigest(algorithm.toString());
+	}
+
+	public static MessageDigest getDigest(Algorithm algorithm, String provider) {
+		return DigestUtils.getDigest(algorithm.toString(), provider);
+	}
+
 	public static MessageDigest getDigest(String algorithm) {
 		try {
 			return MessageDigest.getInstance(algorithm);
-		}
-		catch (NoSuchAlgorithmException ex) {
+		} catch (NoSuchAlgorithmException ex) {
 			throw new IllegalStateException("Could not find MessageDigest with algorithm \"" + algorithm + "\"", ex);
 		}
-    }
-	
-	public static MessageDigest getDigest(String algorithm,String provider) {
+	}
+
+	public static MessageDigest getDigest(String algorithm, String provider) {
 		try {
 			return MessageDigest.getInstance(algorithm);
-		}
-		catch (NoSuchAlgorithmException ex) {
+		} catch (NoSuchAlgorithmException ex) {
 			throw new IllegalStateException("Could not find MessageDigest with algorithm \"" + algorithm + "\"", ex);
 		}
-    }
+	}
 
 	public static byte[] digest(String algorithm, byte[] bytes) {
 		return getDigest(algorithm).digest(bytes);
@@ -108,25 +109,22 @@ public class DigestUtils extends org.apache.commons.codec.digest.DigestUtils{
 	}
 
 	public static void main(String[] args) {
-		  //加入bouncyCastle支持 
-			if(Security.getProvider("BC") == null){
-				// 加入bouncyCastle支持
-				Security.addProvider(new BouncyCastleProvider());
-			}
-		  for (Provider p : Security.getProviders()) { 
-			  System.out.println(p);
-			  /*for (Map.Entry<Object, Object> entry : p.entrySet()) {
-				  System.out.println("\t"+entry.getKey()); 
-			  } */
-		  }
-		  System.out.println(DigestUtils.getDigest("SM3"));
-		/*System.out.println(DigestUtils.getDigest(Algorithm.KEY_SM3));
+
+		for (Provider p : Security.getProviders()) {
+			System.out.println(p);
+			/*
+			 * for (Map.Entry<Object, Object> entry : p.entrySet()) {
+			 * System.out.println("\t"+entry.getKey()); }
+			 */
+		}
+		
+		System.out.println(DigestUtils.getDigest(Algorithm.KEY_SM3));
 		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD128));
 		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD160));
 		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD256));
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD320));*/
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).getProvider());
-		System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).digest().length);
-		
+		System.out.println(DigestUtils.getDigest(Algorithm.KEY_RIPEMD320));
+		//System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).getProvider());
+		//System.out.println(DigestUtils.getDigest(Algorithm.KEY_HMAC_MD5).digest().length);
+
 	}
 }
