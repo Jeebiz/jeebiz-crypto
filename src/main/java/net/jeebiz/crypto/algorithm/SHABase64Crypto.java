@@ -9,12 +9,12 @@ import org.apache.commons.codec.BinaryEncoder;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.StringEncoder;
 import org.apache.commons.codec.binary.Base64;
-import net.jeebiz.crypto.InputStreamEncoder;
+import net.jeebiz.crypto.InputStreamEncryptor;
 import net.jeebiz.crypto.StringVerifier;
 import net.jeebiz.crypto.digest.DigestUtils;
 import net.jeebiz.crypto.utils.StringUtils;
 
-public class SHABase64Crypto  implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier  {
+public class SHABase64Crypto  implements StringEncoder,BinaryEncoder,InputStreamEncryptor,StringVerifier  {
 	
 	private static SHABase64Crypto instance = null;
 	private SHABase64Crypto(){};

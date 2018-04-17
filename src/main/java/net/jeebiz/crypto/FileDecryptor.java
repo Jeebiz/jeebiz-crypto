@@ -6,7 +6,7 @@ import java.security.GeneralSecurityException;
  * 
  * 
  */
-public interface FileDecoder {
+public interface FileDecryptor {
 
 	public void decode(String key, String encryptedFilePath,String destFilePath) throws GeneralSecurityException,IOException;
 	

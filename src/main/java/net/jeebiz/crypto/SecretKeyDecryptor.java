@@ -5,7 +5,7 @@ import java.security.GeneralSecurityException;
  * 
  * 密钥解密算法接口
  */
-public interface SecretKeyDecoder {
+public interface SecretKeyDecryptor {
 	
 	public String decode(String encryptedText,String key) throws GeneralSecurityException ;
 	public String decode(String encryptedText,byte[] key) throws GeneralSecurityException ;

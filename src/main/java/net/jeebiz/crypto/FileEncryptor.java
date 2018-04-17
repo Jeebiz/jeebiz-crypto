@@ -6,7 +6,7 @@ import java.security.GeneralSecurityException;
  * 
  * 
  */
-public interface FileEncoder {
+public interface FileEncryptor {
 
 	public void encode(String key, String sourceFilePath,String destFilePath) throws GeneralSecurityException,IOException;
 	

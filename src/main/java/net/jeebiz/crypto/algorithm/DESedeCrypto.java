@@ -9,10 +9,10 @@ import javax.crypto.Cipher;
 
 import org.apache.commons.codec.binary.Base64;
 import net.jeebiz.crypto.Crypto;
-import net.jeebiz.crypto.FileDecoder;
-import net.jeebiz.crypto.FileEncoder;
-import net.jeebiz.crypto.SecretKeyDecoder;
-import net.jeebiz.crypto.SecretKeyEncoder;
+import net.jeebiz.crypto.FileDecryptor;
+import net.jeebiz.crypto.FileEncryptor;
+import net.jeebiz.crypto.SecretKeyDecryptor;
+import net.jeebiz.crypto.SecretKeyEncryptor;
 import net.jeebiz.crypto.enums.Algorithm;
 import net.jeebiz.crypto.utils.CipherUtils;
 import net.jeebiz.crypto.utils.DecryptUtils;
@@ -25,7 +25,7 @@ import net.jeebiz.crypto.utils.StringUtils;
  * @className: DESedeCodec
  *  DESede对称加密算法
  */
-public class DESedeCrypto implements Crypto,SecretKeyEncoder,SecretKeyDecoder,FileEncoder,FileDecoder{
+public class DESedeCrypto implements Crypto,SecretKeyEncryptor,SecretKeyDecryptor,FileEncryptor,FileDecryptor{
 	
 	private static DESedeCrypto instance = null;
 	private DESedeCrypto(){};

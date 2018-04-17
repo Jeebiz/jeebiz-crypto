@@ -8,7 +8,7 @@ package net.jeebiz.crypto;
 import java.io.IOException;
 import java.io.InputStream;
 
-public interface InputStreamEncoder {
+public interface InputStreamEncryptor {
 
 	public String encode(InputStream plantStream) throws IOException;
 	

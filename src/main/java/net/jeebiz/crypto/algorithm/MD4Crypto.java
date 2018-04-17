@@ -7,7 +7,7 @@ import org.apache.commons.codec.BinaryEncoder;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.StringEncoder;
 import org.apache.commons.codec.binary.Hex;
-import net.jeebiz.crypto.InputStreamEncoder;
+import net.jeebiz.crypto.InputStreamEncryptor;
 import net.jeebiz.crypto.StringVerifier;
 import net.jeebiz.crypto.digest.DigestUtils;
 import net.jeebiz.crypto.enums.Algorithm;
@@ -16,7 +16,7 @@ import net.jeebiz.crypto.utils.StringUtils;
  * 
  * bouncy castle扩展支持的MD4的算法实现
  */
-public class MD4Crypto implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier  {
+public class MD4Crypto implements StringEncoder,BinaryEncoder,InputStreamEncryptor,StringVerifier  {
 
 	private static MD4Crypto instance = null;
 	private MD4Crypto(){};

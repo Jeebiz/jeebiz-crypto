@@ -9,13 +9,13 @@ import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.StringEncoder;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
-import net.jeebiz.crypto.InputStreamEncoder;
+import net.jeebiz.crypto.InputStreamEncryptor;
 import net.jeebiz.crypto.StringVerifier;
 /**
  * 
  * 标准MD5+Base64加密方法，使用java类库的security包的MessageDigest类处理
  */
-public class MD5Base64Crypto implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier {
+public class MD5Base64Crypto implements StringEncoder,BinaryEncoder,InputStreamEncryptor,StringVerifier {
 	
 	private static MD5Base64Crypto instance = null;
 	private MD5Base64Crypto(){};

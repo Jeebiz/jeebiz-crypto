@@ -6,15 +6,15 @@ import org.apache.commons.codec.binary.Base64;
 import net.jeebiz.crypto.BinaryDecryptor;
 import net.jeebiz.crypto.BinaryEncryptor;
 import net.jeebiz.crypto.BinaryVerifier;
-import net.jeebiz.crypto.StringDecoder;
-import net.jeebiz.crypto.StringEncoder;
+import net.jeebiz.crypto.StringDecryptor;
+import net.jeebiz.crypto.StringEncryptor;
 import net.jeebiz.crypto.StringVerifier;
 import net.jeebiz.crypto.utils.StringUtils;
 /**
  * 
  * 基于apache codec 的base64加密解密实现的扩展
  */
-public class Base64Crypto implements StringEncoder,StringDecoder,BinaryEncryptor,BinaryDecryptor,StringVerifier,BinaryVerifier {
+public class Base64Crypto implements StringEncryptor,StringDecryptor,BinaryEncryptor,BinaryDecryptor,StringVerifier,BinaryVerifier {
 	
 	private static Base64Crypto instance = null;
 	private Base64Crypto(){};

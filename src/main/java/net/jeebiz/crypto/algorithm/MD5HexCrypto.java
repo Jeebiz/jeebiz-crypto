@@ -9,14 +9,14 @@ import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.StringEncoder;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
-import net.jeebiz.crypto.InputStreamEncoder;
+import net.jeebiz.crypto.InputStreamEncryptor;
 import net.jeebiz.crypto.StringVerifier;
 import net.jeebiz.crypto.utils.StringUtils;
 /**
  * 
  * 标准MD5+Hex加密方法，使用java类库的security包的MessageDigest类处理
  */
-public class MD5HexCrypto implements StringEncoder,BinaryEncoder,InputStreamEncoder,StringVerifier {
+public class MD5HexCrypto implements StringEncoder,BinaryEncoder,InputStreamEncryptor,StringVerifier {
 	
 	private static MD5HexCrypto instance = null;
 	private MD5HexCrypto(){};
