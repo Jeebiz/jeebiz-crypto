@@ -15,7 +15,7 @@ import net.jeebiz.crypto.utils.SecretKeyUtils;
 import net.jeebiz.crypto.utils.StringUtils;
 /**
  * 
- *  PBE——Password-based encryption（基于密码加密）。其特点在于口令由用户自己掌管，不借助任何物理媒体；采用随机数（这里我们叫做盐）杂凑多重加密等方法保证数据的安全性。是一种简便的加密方式。 
+ * PBE——Password-based encryption（基于密码加密）。其特点在于口令由用户自己掌管，不借助任何物理媒体；采用随机数（这里我们叫做盐）杂凑多重加密等方法保证数据的安全性。是一种简便的加密方式。 
  * 使用java6提供的PBEWITHMD5andDES算法进行展示
  * JAVA6支持以下任意一种算法
  * PBEWITHMD5ANDDES
@@ -107,32 +107,5 @@ public class PBECrypto implements Crypto {
 		//执行操作
 		return cipher.doFinal(encryptedBytes);
 	}
-	
-	
-	/**
-	 * 使用PBE算法对数据进行加解密
-	 * @throws Exception 
-	 * 
-	 */
-	public static void main(String[] args) throws Exception {
-		//待加密数据
-		String str="PBE";
-		//设定的口令密码
-		String password="azsxdc";
-		
-		System.out.println("原文：/t"+str);
-		System.out.println("密码：/t"+password);
-		
-		//初始化盐
-		byte[] salt = PBECrypto.getInstance().initkey();
-		System.out.println("盐：/t"+Base64.encodeBase64String(salt));
-		//加密数据
-		byte[] data=PBECrypto.getInstance().encode(str.getBytes(), password, salt);
-		System.out.println("加密后：/t"+Base64.encodeBase64String(data));
-		//解密数据
-		data=PBECrypto.getInstance().decode(data, password, salt);
-		System.out.println("解密后："+new String(data));
-	}
-
 	
 }

@@ -77,21 +77,4 @@ public class MD4HexCrypto implements StringEncoder,BinaryEncoder,InputStreamEncr
 		return encode(source, times).equals(encrypt);
 	}
 
-	
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		String str="bouncycast 的消息摘要算法";
-		System.out.println("原文："+str);
-		byte[] data1=  MD4HexCrypto.getInstance().encode(str.getBytes());
-		System.out.println("MD4的消息摘要算法值："+data1.toString());
-		
-		String data2= MD4HexCrypto.getInstance().encode(str);
-		System.out.println("MD4做十六进制编码处理的消息摘要算法值："+data2);
-		
-		
-	}
-	
 }

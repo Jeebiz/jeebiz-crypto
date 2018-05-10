@@ -144,40 +144,7 @@ public class SMS4Base64Crypto implements StringEncoder,StringDecoder,BinaryEncod
 		return "{SMS4Base64}" + encode(text);
 	}
 	
-	public static void main(String[] args) throws Exception {
-		
-		
-		byte[] in =  "4G USIM卡备卡是为您原卡制作的一张备用卡，相比原卡，安全性更高、容量更大、建议您尽快激活、更换使用USIM卡，并剪毁原卡，确保用卡安全。".getBytes();
-		
-		byte[] key = "300061103172120170".getBytes();
-		
-		System.out.println("Key：");
-		for (int i = 0; i < key.length; i++){
-			System.out.print(Integer.toHexString(key[i] & 0xff) + "");
-		}
-		
-		byte[] out = null;
-		long starttime;
-		System.out.println();
-		System.out.println("加密前：" + StringUtils.newStringUtf8(in));
-		
-		// 加密 128bit
-		starttime = System.nanoTime();
-		out = SMS4Base64Crypto.getInstance(key).encode(in);
-		System.out.println();
-		System.out.println("加密1个分组执行时间： " + (System.nanoTime() - starttime) + "ns");
-		System.out.println("加密结果：");
-		for (int i = 0; i < out.length; i++){
-			System.out.print(Integer.toHexString(out[i] & 0xff) + "");
-		}
-		
-		// 解密 128bit
-		System.out.println();
-		in = SMS4Base64Crypto.getInstance(key).decode(out);
-		System.out.println("解密结果："+ StringUtils.newStringUtf8(in));
-		
-	}
-
+	
 	@Override
 	public String encode(String source) throws EncoderException {
 		// TODO Auto-generated method stub

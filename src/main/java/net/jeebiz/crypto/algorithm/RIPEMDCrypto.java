@@ -1,8 +1,5 @@
 package net.jeebiz.crypto.algorithm;
 /**
- * 
- * @package net.jeebiz.crypto.algorithm
- * @className: RIPEMDCodec
  *  RIPEMD算法
 				 RIPEMD（RACE Integrity Primitives Evaluation Message Digest，RACE原始完整性校验消息摘要），
 				 是Hans Dobbertin等3人在md4,md5的基础上，于1996年提出来的。算法共有4个标准128、160、256和320，

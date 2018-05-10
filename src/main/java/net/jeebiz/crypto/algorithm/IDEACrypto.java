@@ -5,7 +5,6 @@ import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 
-import org.apache.commons.codec.binary.Base64;
 import net.jeebiz.crypto.enums.Algorithm;
 import net.jeebiz.crypto.utils.CipherUtils;
 import net.jeebiz.crypto.utils.SecretKeyUtils;
@@ -67,22 +66,5 @@ public class IDEACrypto {
 		//执行操作
 		return cipher.doFinal(data);
 	}
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		
-		String str="IDEA";
-		System.out.println("原文："+str);
-		//初始化密钥
-		byte[] key = IDEACrypto.initkey();
-		System.out.println("密钥："+Base64.encodeBase64String(key));
-		//加密数据
-		byte[] data=IDEACrypto.encrypt(str.getBytes(), key);
-		System.out.println("加密后："+Base64.encodeBase64String(data));
-		//解密数据
-		data= IDEACrypto.decrypt(data, key);
-		System.out.println("解密后："+new String(data));
-	}
+	
 }

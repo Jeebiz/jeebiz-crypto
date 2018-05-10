@@ -12,9 +12,6 @@ import net.jeebiz.crypto.utils.HmacUtils;
 import net.jeebiz.crypto.utils.SecretKeyUtils;
 import net.jeebiz.crypto.utils.StringUtils;
 /**
- * 
- * @package net.jeebiz.crypto.algorithm
- * @className: HmacBase64Codec
  *  MAC消息摘要组件
  */
 public class HmacBase64Crypto implements StringEncoder,BinaryEncoder,StringVerifier {

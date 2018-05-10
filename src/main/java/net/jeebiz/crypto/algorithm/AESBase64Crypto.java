@@ -22,13 +22,8 @@ import net.jeebiz.crypto.utils.SecretKeyUtils;
 import net.jeebiz.crypto.utils.StringUtils;
 
 /**
- * 
- * @className	： AESBase64Codec
- * @description	： AES加密解密工具包 AES对称加密算法
- * 				java6实现，bouncycastle也支持AES对称加密算法我们可以以AES算法实现为参考，完成RC2，RC4和Blowfish算法的实现
+ * AES加密解密工具包 AES对称加密算法 java6实现，bouncycastle也支持AES对称加密算法我们可以以AES算法实现为参考，完成RC2，RC4和Blowfish算法的实现
  * @author 		： <a href="https://github.com/vindell">vindell</a>
- * @date		： 2017年9月12日 下午10:45:44
- * @version 	V1.0
  */
 public class AESBase64Crypto implements Crypto, SecretKeyEncryptor,SecretKeyDecryptor,FileEncryptor,FileDecryptor {
 
@@ -60,10 +55,7 @@ public class AESBase64Crypto implements Crypto, SecretKeyEncryptor,SecretKeyDecr
 	}
 	
 	/**
-	 * 
-	 * @description	： 加密数据
-	 * @author 		：<a href="https://github.com/vindell">vindell</a>
-	 * @date 		：2017年9月12日 下午10:46:00
+	 * 加密数据
 	 * @param plainBytes 待加密数据
 	 * @param base64Key  密钥
 	 * @return byte[] 加密后的数据
@@ -114,8 +106,7 @@ public class AESBase64Crypto implements Crypto, SecretKeyEncryptor,SecretKeyDecr
 	}
 	
 	/**
-	 * 
-	 *  解密数据
+	 * 解密数据
 	 * @param data 待解密数据
 	 * @param base64Key  密钥
 	 * @return byte[] 解密后的数据
@@ -151,31 +142,5 @@ public class AESBase64Crypto implements Crypto, SecretKeyEncryptor,SecretKeyDecr
 			DecryptUtils.decrypt(deCipher, sourceFile.getAbsolutePath(), destFilePath);
 		}
 	}
-	
-
-	/**
-	 * @param args
-	 * @throws Exception
-	 */
-	public static void main(String[] args) throws Exception {
-		AESBase64Crypto codec = new AESBase64Crypto();
-		String str = "AES";
-		System.out.println("原文：" + str);
-		//初始化密钥生成器，AES要求密钥长度为128位、192位、256位
-		byte[] base64Key = SecretKeyUtils.genBinarySecretKey(Algorithm.KEY_AES, 256);
-		
-		
-		System.out.println(base64Key.length);
-		System.out.println(Base64.encodeBase64(base64Key).length);
-		System.out.println("密钥：" + Base64.encodeBase64String(Base64.encodeBase64(base64Key)));
-		// 加密数据
-		byte[] data = codec.encode(str.getBytes(), Base64.encodeBase64(base64Key));
-		System.out.println("加密后：" + Base64.encodeBase64String(data));
-		// 解密数据
-		data = codec.decode(data, base64Key);
-		System.out.println("解密后：" + new String(data));
-	}
-
-	
 
 }

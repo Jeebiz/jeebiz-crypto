@@ -319,15 +319,4 @@ public abstract class CertificateCrypto  {
 		return verifyCertificate(new Date(), keyStorePath, alias, password);
 	}
 	
-	public static void main(String[] args) {
-		/**
-		步骤一：生成keyStroe文件 
-		keytool -genkey -validity 36000 -alias www.zlex.org -keyalg RSA -keystore d:\zlex.keystore 
-		
-		
-		
-		**/
-		
-		
-	}
 }

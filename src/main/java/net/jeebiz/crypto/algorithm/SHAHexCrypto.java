@@ -138,27 +138,4 @@ public class SHAHexCrypto  implements StringEncoder,BinaryEncoder,StringVerifier
 		return encode(source, times).equals(encrypt);
 	}
 	
-	
-	/**
-	 * 提供一个测试的主函数
-	 * @throws EncoderException 
-	 */
-	public static void main(String[] args){
-		
-		SHAHexCrypto codec = new SHAHexCrypto();
-		/*try {
-			System.out.println(getMD5DigestHex("").toUpperCase());
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		System.out.println("test:" + codec.encode("").toUpperCase());
-		System.out.println("123:" + codec.encode("123").toUpperCase());
-		System.out.println("123456789:" + codec.encode("123456789").toUpperCase());
-		System.out.println("sarin:" + codec.encode("sarin").toUpperCase());
-		System.out.println("123:" + codec.encode("123", 4).toUpperCase());
-	}
-
-
-	
 }

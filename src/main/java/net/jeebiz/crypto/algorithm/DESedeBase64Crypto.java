@@ -21,9 +21,6 @@ import net.jeebiz.crypto.utils.EncryptUtils;
 import net.jeebiz.crypto.utils.SecretKeyUtils;
 import net.jeebiz.crypto.utils.StringUtils;
 /**
- * 
- * @package net.jeebiz.crypto.algorithm
- * @className: DESedeCodec
  *  DESede+ Base64 加密算法
  */
 public class DESedeBase64Crypto implements Crypto,SecretKeyEncryptor,SecretKeyDecryptor,FileEncryptor,FileDecryptor{
@@ -131,25 +128,6 @@ public class DESedeBase64Crypto implements Crypto,SecretKeyEncryptor,SecretKeyDe
 			//使用初始化的加密对象对文件进行解密处理
 			DecryptUtils.decrypt(deCipher, sourceFile.getAbsolutePath(), destFilePath);
 		}
-	}
-	
-	/**
-	 * 进行加解密的测试
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		
-		String str="DESede";
-		String encryptKey = Base64.encodeBase64String(SecretKeyUtils.genSecretKey(Algorithm.KEY_DESEDE, 168).getEncoded());
-		
-		System.out.println("原文：/t"+str);
-		System.out.println("密钥：/t"+encryptKey);
-		//加密数据
-		String encryptedText = DESedeBase64Crypto.getInstance().encode(str, encryptKey);
-		System.out.println("加密后：/t"+encryptedText);
-		//解密数据
-		System.out.println("解密后：/t"+DESedeBase64Crypto.getInstance().decode(encryptedText, encryptKey));
-		
 	}
 	
 }

@@ -67,20 +67,4 @@ public class MD4Base64Crypto implements StringEncoder,BinaryEncoder,StringVerifi
 		return encode(plainText, times).equals(encryptedText);
 	}
 
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		String str="bouncycast 的消息摘要算法";
-		System.out.println("原文："+str);
-		byte[] data1 =  MD4Base64Crypto.getInstance().encode(str.getBytes());
-		System.out.println("MD4的消息摘要算法值："+data1.toString());
-		
-		String data2 = MD4Base64Crypto.getInstance().encode(str);
-		System.out.println("MD4做十六进制编码处理的消息摘要算法值："+data2);
-		
-		
-	}
-	
 }

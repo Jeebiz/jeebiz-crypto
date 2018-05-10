@@ -19,6 +19,19 @@ public class CertificateCryptoTest {
 	private String certificatePath = "d:/zlex.cer";
 	private String keyStorePath = "d:/zlex.keystore";
 
+
+	public static void main(String[] args) {
+		/**
+		步骤一：生成keyStroe文件 
+		keytool -genkey -validity 36000 -alias www.zlex.org -keyalg RSA -keystore d:\zlex.keystore 
+		
+		
+		
+		**/
+		
+		
+	}
+	
 	@Test
 	public void test0() throws Exception {
 

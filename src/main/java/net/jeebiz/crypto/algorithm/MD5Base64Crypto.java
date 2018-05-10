@@ -75,28 +75,4 @@ public class MD5Base64Crypto implements StringEncoder,BinaryEncoder,InputStreamE
 		return Base64.encodeBase64String(DigestUtils.md5(source));
 	}
 	
-	
-	/**
-	 * 提供一个测试的主函数
-	 * @throws EncoderException 
-	 */
-	public static void main(String[] args) throws Exception {
-		
-		MD5Base64Crypto md5Base64 = new MD5Base64Crypto();
-		/*try {
-			System.out.println(getMD5DigestHex("").toUpperCase());
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		System.out.println("test-encode:" + md5Base64.encode("").toUpperCase().length());
-		System.out.println("123-encode:" + md5Base64.encode("123").toUpperCase().length());
-		
-		System.out.println("123456789-encode:" + md5Base64.encode("123dddddddddddddd456789").toUpperCase().length());
-		System.out.println("sarin-encode:" + md5Base64.encode("sarin").toUpperCase());
-		System.out.println("123-encode:" + md5Base64.encode("123", 4).toUpperCase());
-	}
-
-	
-	
 }

@@ -1,16 +1,20 @@
 
-#commons-codec-ext
+#jeebiz-crypto
 
 基于commons-codec和bcprov-jdk15on的常用加解密实现
 
-#描述
-======================================================================
 
-#更新说明
-======================================================================
+### Maven Dependency
 
-##V0.0.1-SNAPSHOT
+``` xml
+<dependency>
+	<groupId>net.jeebiz</groupId>
+	<artifactId>jeebiz-crypto</artifactId>
+	<version>${project.version}</version>
+</dependency>
+```
 
-
-
-
+### Usage
+------------
+``` 
+```

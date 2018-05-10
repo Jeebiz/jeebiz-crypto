@@ -76,24 +76,4 @@ public class MD5HexCrypto implements StringEncoder,BinaryEncoder,InputStreamEncr
 		return Hex.encodeHexString(DigestUtils.md5(source));
 	}
 	
-	/**
-	 * 提供一个测试的主函数
-	 * @throws EncoderException 
-	 */
-	public static void main(String[] args){
-		
-		MD5HexCrypto md5hex = new MD5HexCrypto();
-		/*try {
-			System.out.println(getMD5DigestHex("").toUpperCase());
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		System.out.println("test:" + md5hex.encode("").toUpperCase());
-		System.out.println("123:" + md5hex.encode("123").toUpperCase());
-		System.out.println("123456789:" + md5hex.encode("123456789").toUpperCase().length());
-		System.out.println("sarin:" + md5hex.encode("sarin").toUpperCase().length());
-		System.out.println("123:" + md5hex.encode("123", 4).toUpperCase().length());
-	}
-	
 }
