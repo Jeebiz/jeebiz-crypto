@@ -67,7 +67,6 @@ public class SecretKeyUtils {
 	 * 
 	 * 生成公有key
 	 * 
-	 * @author ： <a href="https://github.com/vindell">vindell</a>
 	 * @param algorithm
 	 * @param publicKeyBytes
 	 * @return
@@ -86,7 +85,6 @@ public class SecretKeyUtils {
 	 * 
 	 * 生成私有key
 	 * 
-	 * @author ： <a href="https://github.com/vindell">vindell</a>
 	 * @param algorithm
 	 * @param prikeyBytes
 	 * @return

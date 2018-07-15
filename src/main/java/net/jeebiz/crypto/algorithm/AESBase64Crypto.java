@@ -23,7 +23,6 @@ import net.jeebiz.crypto.utils.StringUtils;
 
 /**
  * AES加密解密工具包 AES对称加密算法 java6实现，bouncycastle也支持AES对称加密算法我们可以以AES算法实现为参考，完成RC2，RC4和Blowfish算法的实现
- * @author 		： <a href="https://github.com/vindell">vindell</a>
  */
 public class AESBase64Crypto implements Crypto, SecretKeyEncryptor,SecretKeyDecryptor,FileEncryptor,FileDecryptor {
 

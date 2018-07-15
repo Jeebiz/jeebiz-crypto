@@ -7,7 +7,6 @@ import java.security.PublicKey;
 
 /**
  * 公钥加密 私钥解密 私钥签名
- * @author 		： <a href="https://github.com/vindell">vindell</a>
  * @param <Pub>
  * @param <Pri>
  */
