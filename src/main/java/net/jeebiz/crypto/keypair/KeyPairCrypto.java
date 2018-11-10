@@ -52,10 +52,6 @@ public abstract class KeyPairCrypto<Pub extends PublicKey, Pri extends PrivateKe
 	 * @return
 	 * @throws GeneralSecurityException
 	 * @return PrivateKey 返回类型
-	 * @throws @modify
-	 *             by:
-	 * @modify date :
-	 * @modify description : TODO(描述修改内容)
 	 */
 	public abstract Pri toPrivateKey(byte[] keyBytes) throws GeneralSecurityException;
 

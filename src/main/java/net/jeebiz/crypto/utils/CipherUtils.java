@@ -143,10 +143,6 @@ public final class CipherUtils {
 	 * @return
 	 * @throws GeneralSecurityException
 	 * @return byte[] 返回类型
-	 * @throws @modify
-	 *             by:
-	 * @modify date :
-	 * @modify description : TODO(描述修改内容)
 	 */
 	public static byte[] segment(Cipher cipher, byte[] bytes, int block) throws GeneralSecurityException {
 		// 分段加密
