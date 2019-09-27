@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.jeebiz</groupId>
 	<artifactId>jeebiz-crypto</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<description>Commons-codec Extension</description>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/Jeebiz/${project.artifactId}</url>
@@ -26,7 +27,7 @@
 
 	<developers>
 		<developer>
-			<name>vindell</name>
+			<name>wandl</name>
 			<email>hnxyhcwdl1003@163.com</email>
 			<roles>
 				<role>developer</role>
@@ -369,12 +370,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<bcprov.version>1.59</bcprov.version>
+		<bcprov.version>1.63</bcprov.version>
 		<bcpkix.version>${bcprov.version}</bcpkix.version>
 		<bcmail.version>${bcprov.version}</bcmail.version>
 		<bcpg.version>${bcprov.version}</bcpg.version>
 		<bctls.version>${bcprov.version}</bctls.version>
-		<commons-codec.version>1.11</commons-codec.version>
+		<commons-codec.version>1.13</commons-codec.version>
 		<junit.version>4.12</junit.version>
 		<java.version>1.7</java.version>
 		<maven.version>3.0</maven.version>
